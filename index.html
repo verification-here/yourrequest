@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>META BUSSINESS SUIT</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        background-color: white;
+    }
+    .loader {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid lightblue;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite; /* Updated duration from 2s to 1s */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+</style>
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            window.location.href = 'request.html'; // Change to your desired URL
+        }, 3000); // Change delay as needed
+    }
+</script>
+</head>
+<body>
+<div class="loader"></div>
+</body>
+</html>
