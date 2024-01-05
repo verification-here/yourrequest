@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1, progress {
+      text-align: center;
+    }
+  </style>
+  <script>
+    function updateProgress() {
+      let progress = 0;
+      const progressBar = document.getElementById('progress');
+
+      const interval = setInterval(function() {
+        progress++;
+        progressBar.value = progress;
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(function() {
+            var redirectURL = "request.html"; // Updated URL
+            window.location.href = redirectURL; // Redirect to the new URL
+          }, 1000); // 1 second delay
+        }
+      }, 10); // Adjust the timing of the progress update
+    }
+  </script>
+</head>
+<body onload="updateProgress()">
+  <progress id="progress" value="0" max="100"></progress><br>
+</body>
+</html>
